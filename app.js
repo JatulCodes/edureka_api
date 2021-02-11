@@ -3,7 +3,7 @@ const app= express();
 const port = process.env.PORT || 9800;
 const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
-const mongourl ="mongodb+srv://dev:mongo123@cluster0.f8vmc.mongodb.net/edurekinternship?retryWrites=true&w=majority";
+const mongourl ="mongodb+srv://jatulapp:jatulapp@cluster0.wf5bt.mongodb.net/restaurent?retryWrites=true&w=majority";
 const bodyParser=require('body-parser');
 const cors = require('cors');
 const { query } = require('express');
@@ -89,7 +89,7 @@ app.get('/orders',(req,res)=>{
 //mongodb server connections
 MongoClient.connect(mongourl,(err,connection)=>{
     if(err) console.log(err);
-    db = connection.db('edurekinternship');
+    db = connection.db('restaurent');
     app.listen(port,(err)=>{
         if(err) throw err;
         console.log (`Server is running on port ${port}`)
