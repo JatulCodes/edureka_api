@@ -67,7 +67,7 @@ app.get('/rest', (req, res) => {
     else if (req.query.city) {
         condition = { city: req.query.city }
     }
-    db.collection('restaurent').find(condition).toArray((err, result) => {
+    db.collection('rest').find(condition).toArray((err, result) => {
         if (err) throw err;
         res.send(result);
     })
