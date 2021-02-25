@@ -9,7 +9,7 @@ const mongourl = "mongodb+srv://jatulapp:jatulapp@cluster0.wf5bt.mongodb.net/res
 
 let db;
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true,}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json())
 
 //health check
